@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Bluebells Bistro & Stay Design System
+Earthy elegance with warm tones and gold accents
+*/
+
+@layer base {
+  :root {
+    /* Core neutral palette */
+    --background: 35 25% 96%;
+    --foreground: 25 15% 15%;
+
+    /* Card and surface colors */
+    --card: 35 30% 98%;
+    --card-foreground: 25 15% 15%;
+
+    --popover: 35 30% 98%;
+    --popover-foreground: 25 15% 15%;
+
+    /* Primary - warm earthy brown */
+    --primary: 25 25% 25%;
+    --primary-foreground: 35 25% 96%;
+
+    /* Secondary - sage green */
+    --secondary: 85 15% 85%;
+    --secondary-foreground: 25 25% 25%;
+
+    /* Muted tones */
+    --muted: 35 15% 90%;
+    --muted-foreground: 25 10% 50%;
+
+    /* Accent - gold highlights */
+    --accent: 45 85% 65%;
+    --accent-foreground: 25 25% 15%;
+
+    /* Destructive states */
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 35 25% 96%;
+
+    /* Borders and inputs */
+    --border: 35 20% 85%;
+    --input: 35 25% 90%;
+    --ring: 45 85% 65%;
+
+    /* Custom restaurant colors */
+    --warm-cream: 35 35% 94%;
+    --rich-brown: 25 30% 20%;
+    --sage-green: 85 20% 70%;
+    --gold-accent: 45 85% 65%;
+    --soft-gold: 45 60% 85%;
+    
+    /* Gradients */
+    --gradient-warm: linear-gradient(135deg, hsl(35 35% 94%) 0%, hsl(35 25% 88%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(25 30% 20% / 0.8) 0%, hsl(25 25% 25% / 0.6) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(45 85% 65%) 0%, hsl(45 75% 70%) 100%);
+    
+    /* Shadows */
+    --shadow-elegant: 0 4px 20px hsl(25 30% 20% / 0.1);
+    --shadow-gold-glow: 0 0 30px hsl(45 85% 65% / 0.3);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode with warm undertones */
+    --background: 25 20% 8%;
+    --foreground: 35 25% 92%;
+
+    --card: 25 25% 12%;
+    --card-foreground: 35 25% 92%;
+
+    --popover: 25 25% 12%;
+    --popover-foreground: 35 25% 92%;
+
+    --primary: 45 85% 65%;
+    --primary-foreground: 25 20% 8%;
+
+    --secondary: 25 20% 18%;
+    --secondary-foreground: 35 25% 92%;
+
+    --muted: 25 15% 15%;
+    --muted-foreground: 35 15% 65%;
+
+    --accent: 45 75% 60%;
+    --accent-foreground: 25 20% 8%;
+
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 35 25% 92%;
+
+    --border: 25 20% 20%;
+    --input: 25 20% 18%;
+    --ring: 45 85% 65%;
+
+    /* Dark mode custom colors */
+    --warm-cream: 25 15% 15%;
+    --rich-brown: 25 40% 15%;
+    --sage-green: 85 15% 30%;
+    --gold-accent: 45 75% 60%;
+    --soft-gold: 45 40% 25%;
+    
+    /* Dark gradients */
+    --gradient-warm: linear-gradient(135deg, hsl(25 20% 12%) 0%, hsl(25 15% 8%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(25 40% 5% / 0.9) 0%, hsl(25 30% 8% / 0.7) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(45 75% 60%) 0%, hsl(45 65% 65%) 100%);
+    
+    /* Dark shadows */
+    --shadow-elegant: 0 4px 20px hsl(25 40% 5% / 0.3);
+    --shadow-gold-glow: 0 0 30px hsl(45 75% 60% / 0.2);
+
+    --sidebar-background: 25 25% 10%;
+    --sidebar-foreground: 35 25% 90%;
+    --sidebar-primary: 45 75% 60%;
+    --sidebar-primary-foreground: 25 20% 8%;
+    --sidebar-accent: 25 20% 15%;
+    --sidebar-accent-foreground: 35 25% 90%;
+    --sidebar-border: 25 20% 15%;
+    --sidebar-ring: 45 75% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins;
+  }
+
+  /* Typography */
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* Custom utility classes */
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .shadow-gold-glow {
+    box-shadow: var(--shadow-gold-glow);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+
+  /* Scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Hover animations */
+  .hover-scale {
+    @apply transition-smooth hover:scale-105;
+  }
+
+  .hover-glow {
+    @apply transition-smooth hover:shadow-gold-glow;
+  }
+}
